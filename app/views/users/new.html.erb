@@ -1,0 +1,28 @@
+<h1>Page d'inscription</h1>
+
+<div style="text-align:center; margin-top:50px;">
+    <%= form_tag url_for(action:'create'), method: "post" do %>
+      <%= label_tag 'Prénom' %><br>
+      <%= text_field_tag 'first_name'  %>
+      <br /> <br />
+      <%= label_tag 'Nom' %><br>
+      <%= text_field_tag 'last_name'  %>
+      <br /> <br />
+      <%= label_tag 'Description ' %><br>
+      <%= text_field_tag 'description'  %>
+      <br /> <br />
+      <%= label_tag 'Age ' %><br>
+      <%= text_field_tag 'age'  %>
+      <br /> <br />
+      <%= label_tag 'E-mail' %><br>
+      <%= text_field_tag 'email'  %>
+      <br /> <br />
+      <%= label_tag 'Mot de Passe' %><br>
+      <%= text_area_tag 'password' %><br>
+      <%= label_tag 'Confirme ton Mot de Passe' %><br>
+      <%= text_area_tag 'password_confirmation' %>
+      <br /> <br />
+      <%= submit_tag "M'inscrire" %>
+    <% end %>
+   
+  </div>

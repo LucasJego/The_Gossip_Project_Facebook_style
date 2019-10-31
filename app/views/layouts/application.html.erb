@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>TheGossipProjet</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <!-- Lien boostrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+
+  <body>
+
+    <!-- navbar bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <%= link_to "HOME Montpellier", gossips_path %>
+      <%= link_to "Inscription/Connexion", new_user_path %>
+      <%= link_to "Team", team_path %>
+      <%= link_to "Contact", contact_path %>
+      <%= link_to "Créer ton gossip", new_gossip_path %>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+<!-- style="padding-left:10px;" me permet de faire des espaces entre les boutons -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li style="padding-left:10px;"class="nav-item">
+            <%= link_to "Gossips", gossips_path %>
+          </li>
+          <li style="padding-left:10px;"class="nav-item">
+            <%= link_to "Team", team_path %>
+          </li>
+          <li style="padding-left:10px;" class="nav-item">
+            <%= link_to "Contact", contact_path %>
+          </li>
+          <li style="padding-left:10px;" class="nav-item">
+            <%= link_to "Créer ton gossip", new_gossip_path %>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+
+
+    </nav>
+
+
+
+
+    <%= yield %>
+
+  </body>
+</html>
